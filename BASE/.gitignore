@@ -2,14 +2,14 @@
 *.pyc
 *~
 __pycache__
-icons
+
 # Env
-.env
 myvenv/
 venv/
+.env
 
 # Database
-db.sqlite3
+# db.sqlite3 (In reality you would want to hide the database but since this is not run on an actual server, it does not matter.)
 
 # Static folder at project root
 
