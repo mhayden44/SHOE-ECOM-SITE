@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for shoe in shoes %}
+<title>Shoes - {{shoe.gender}}</title>
+<div class="shoe-container">
+  <div class="shoe-card">
+      <div class="shoe-image">
+          <span class="discount-tag">{{ shoe.id }}</span>
+          <img src="{{ shoe.image.url }}" class="shoe-thumb" alt="">
+      </div>
+      {% if user.is_authenticated %}
+      <a  class="btn btn-primary addtocart" data-action = "add" data-shoe = "{{shoe.id}}">Add to Cart</a>
+      {% else %}
+      <a  class="btn btn-primary addtocart" href="/login">Add to Cart</a>
+      {% endif %}
+          <h2 class="shoe-brand">{{ shoe.brand }}</h2>
+          <h2 class="shoe-name">{{ shoe.name }}</h2>
+          <h5 class="shoe-short-des">{{ shoe.description }}</h5>
+          <span class="price">{{ shoe.price }}</span>
+      </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
+
+
+
