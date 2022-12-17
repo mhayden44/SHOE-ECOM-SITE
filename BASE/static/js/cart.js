@@ -9,7 +9,12 @@ for(let i = 0; i < btns.length; i++){
             console.log("User is not logged in")
         }
         else{
+            this.textContent = "Adding to cart...";
             updateCart(shoeId, action)
+            .then(() => {
+                // Reset the text on the button after the item has been added to the cart
+                this.textContent = "Add to Cart";
+              });
         }
 
     })
