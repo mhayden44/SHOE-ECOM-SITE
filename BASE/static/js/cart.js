@@ -16,9 +16,7 @@ for(let i = 0; i < btns.length; i++){
                 this.textContent = "Add to Cart";
               });
         }
-
     })
-
 }
 
 // Updates the user's cart when they add a shoe to it.
