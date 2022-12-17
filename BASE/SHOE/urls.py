@@ -16,6 +16,7 @@ urlpatterns = [
     path('shoes/womens/work',views.shoes_womens_work,name='shoes_womens_work'),
     path('shoes/womens/casl',views.shoes_womens_casl,name='shoes_womens_casl'),
     path('home/',views.home,name='home'),
+    path('',views.home,name='home'),
     path('register/', views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
@@ -23,5 +24,5 @@ urlpatterns = [
     path('updatecart', views.updateCart, name = 'updatecart'),
     path('updatequantity', views.updateQuantity, name = 'updatequantity'),
     path('clearcart', views.clearCart, name = 'clearcart'),
-    path('search/', SearchView.as_view(), name='search')
+    path('search/', SearchView.as_view(), name='search'),
 ]

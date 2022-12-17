@@ -8,7 +8,7 @@ for(let i = 0; i < btns.length; i++){
         if (user === "AnonymousUser"){
             console.log("User is not logged in")
         }
-        else{
+        else{ // Changes text on "Add to Cart" button to "Adding to cart..." when it is pressed for a brief time
             this.textContent = "Adding to cart...";
             updateCart(shoeId, action)
             .then(() => {
