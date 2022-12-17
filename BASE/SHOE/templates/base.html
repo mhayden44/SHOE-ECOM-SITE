@@ -15,7 +15,7 @@
     <script>
 
       let user = "{{request.user}}"
-
+      // Stores cookies for use with the cart system
       function getCookie(name) {
         let cookieValue = null;
         if (document.cookie && document.cookie !== '') {
@@ -34,6 +34,7 @@
     const csrftoken = getCookie('csrftoken');
     </script>
 </head>
+<!--Navigation bar-->
 <body>
     <div class="navbar2">
         <a href="/home">Home</a>
@@ -61,32 +62,22 @@
             <a href="/shoes/womens/drss">Dress</a>
             <a href="/shoes/womens/casl">Casual</a>
         </div>
-    </div>
+        </div>
         {% if user.is_authenticated %}
             <a id="navbarR2" href="/logout" >Logout</a>
             <a id="navbarR2" href="/cart" >Cart</a>
             <a id="navbarR2">Welcome, {{ user.username }}!</a>
-            
-            <div>
-                <form action="{% url 'search' %}" method="GET">
-                <input type="text"  name="query" placeholder="Search for shoes">
-                <button type="submit">Search</button></form>
-            </div>
-        
         {% else %}
             <a id="navbarR2" href="/login" >Login</a>
             <a id="navbarR2" href="/login" >Cart</a>
             <a id="navbarR2">Welcome!</a>
-            
+        {% endif %}
             <div>
                 <form action="{% url 'search' %}" method="GET">
                 <input type="text"  name="query" placeholder="Search for shoes">
                 <button type="submit">Search</button></form>
             </div>
-            
-        {% endif %}
     </div>
-
       {% block content %}
       <h1>Hello World</h1>
       {% endblock %}

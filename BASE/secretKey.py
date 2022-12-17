@@ -1,3 +1,5 @@
+# Generates a Django SECRET_KEY
+# The output should be copy and pasted into a file within SHOE ECOM SITE/BASE called .env
 import secrets
 
 length = 50

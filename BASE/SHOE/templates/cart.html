@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<!-- Quantity and Price Section -->
+<!-- Page setup -->
 <title>Cart</title>
 <div class = 'container' style = "width: 70%">
     <table class="table table-light table-hover">
@@ -15,12 +15,11 @@
           </tr>
         </thead>
         <tbody>
-         
+          <!-- Band at top of cart page that shows total amount of items, total cost, button to checkout (not implemented to work) and a button to clear cart -->
           <tr>
             <th scope="row"><h3><strong>Items: {{cart.get_itemtotal}}</strong></h3></th>
             <td></td>
             <td><h3><strong>Total: ${{cart.get_cart_total|floatformat:2}}</strong></h3></td>
-            <!-- <td></td> -->
             <td><button type="button" class="btn btn-primary btn-lg">Checkout →</button></td>
             <td><form action="{% url 'clearcart' %}" style="color:orange;" method="POST">
               {% csrf_token %}
@@ -33,7 +32,7 @@
     </div>
 
 
-    <!-- Cart Section -->
+<!-- Lists each shoe that is in the cart along with the respective name, price, quantity, and total price (quantity * price) of each shoe -->
 <div class = 'container' style = 'margin-top: 50px; width: 70%'>
 <table class="table table-light table-hover">
     <thead>

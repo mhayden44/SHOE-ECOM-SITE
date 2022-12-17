@@ -1,10 +1,10 @@
+// Each shoe has an add to cart button that allows for it to be added to the user's cart.
 let btns = document.getElementsByClassName('addtocart')
 for(let i = 0; i < btns.length; i++){
     btns[i].addEventListener('click', function(){
         let shoeId = this.dataset.shoe
         let action = this.dataset.action
-        location.reload()
-        
+        location.reload()    
         if (user === "AnonymousUser"){
             console.log("User is not logged in")
         }
@@ -15,6 +15,8 @@ for(let i = 0; i < btns.length; i++){
     })
 
 }
+
+// Updates the user's cart when they add a shoe to it.
 function updateCart(id, action){
     let url = "/updatecart"
     fetch(url, {
@@ -29,6 +31,7 @@ function updateCart(id, action){
     .then(data => console.log(data))
 }
 
+// Allows for the quantity of each shoe within the user's cart to be changed.
 let quantityField = document.getElementsByClassName('quantity')
 for(let i = 0; i <quantityField.length; i++){
     quantityField[i].addEventListener('change',function(){

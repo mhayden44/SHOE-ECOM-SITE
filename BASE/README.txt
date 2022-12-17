@@ -1,5 +1,6 @@
 **FOR WINDOWS**
-cd to SHOE ECOM SITE/BASE
+cd \
+cd to SHOE ECOM SITE/BASE (it may be different depending on how the project was downloaded, just right click on the top BASE directory and select copy path and cd to that)
 python -m venv myvenv
 myvenv\scripts\activate
 pip install -r requirements.txt

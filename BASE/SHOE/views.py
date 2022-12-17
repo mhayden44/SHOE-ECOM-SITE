@@ -72,6 +72,7 @@ def register(request):
     context = {'form': form}
     return render(request, 'users/register.html', context)
 
+"""The following cart views work with the javascript functions found in static/js/cart.js in order to allow the user to add, remove, and change the quantity of shoes in their cart"""
 # Cart
 @login_required
 def cart(request):
