@@ -48,3 +48,14 @@ The site is also able to handle different monitor resolutions and zooming in and
 There are no issues displayed when starting the server as well as none when accessing the different pages.
 
 I put the site through vigerous testing, trying out all sorts of different combinations of pages and functions to try and break it but none returned any problems.
+
+
+**SECURITY**
+The proper security settings should be in place, "@login_required" and "if request.user.is_authenticated" are placed throughout the code where needed.
+
+The Django SECRET_KEY is also hidden and must be regenerated whenever downloaded from Github as described in the instruction methods above.
+
+In reality, the static folder and db.sqlite3 would be hidden in the .env file since they would be handled by the production web server. 
+Since this is not the case and it is instead run locally, this is not necessary.
+
+In reality, in settings, DEBUG would be set to "False" but since this is run locally, it does not matter and it would instead cause the static files to not be registered properly.
