@@ -20,7 +20,8 @@
             <th scope="row"><h3><strong>Items: {{cart.get_itemtotal}}</strong></h3></th>
             <td></td>
             <td><h3><strong>Total: ${{cart.get_cart_total|floatformat:2}}</strong></h3></td>
-            <td><button type="button" class="btn btn-primary btn-lg">Checkout →</button></td>
+            <td></td>
+            
             <td><form action="{% url 'clearcart' %}" style="color:orange;" method="POST">
               {% csrf_token %}
               <button type="submit" class="btn btn-primary btn-lg">Clear Cart</button>

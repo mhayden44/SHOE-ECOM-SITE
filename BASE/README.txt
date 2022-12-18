@@ -37,7 +37,7 @@ There is also a button to clear the cart which will remove all the shoes from th
 
 A continue shopping button is located in the top left and will take the user back to the base shoe page.
 
-A checkout button is shown although it has no functionality as I never planned on adding a checkout page mainly for the reason of not wanting users to actually input any payment information.
+Checkout functionality is not implemented since it was never intended to be implemented from the get go as I did not ant users actually inputting any payment information.
 
 The site is also able to handle different monitor resolutions and zooming in and out just fine as it auto adjusts the things on the pages to compensate.
 
